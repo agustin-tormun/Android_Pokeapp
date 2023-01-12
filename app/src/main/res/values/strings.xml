@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PokeApp</string>
+    <string name="home_title">Inicio</string>
+    <string name="party_title">Capturados</string>
+    <string name="types_title">Tipos</string>
+    <string name="main_error_server">Error de servidor, intenta de nuevo en unos minutos</string>
+</resources>
