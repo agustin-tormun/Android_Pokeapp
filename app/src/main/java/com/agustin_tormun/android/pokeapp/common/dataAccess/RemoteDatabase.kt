@@ -1,7 +1,6 @@
 package com.agustin_tormun.android.pokeapp.common.dataAccess
 
 import com.agustin_tormun.android.pokeapp.common.entities.PokemonEntity
-import com.agustin_tormun.android.pokeapp.common.entities.PokemonResult
 import com.agustin_tormun.android.pokeapp.common.utils.Constants
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -26,9 +25,7 @@ class RemoteDatabase {
 
     private val service = retrofit.create(PokemonService::class.java)
 
-    suspend fun getAllPokemons(
-        count: Int, next: String?, previous: String?, results: List<PokemonResult>
-    ): PokemonEntity = withContext(Dispatchers.IO) {
-        service.getAllPokemons(count, next, previous, results)
+    suspend fun getAllPokemons(): PokemonEntity = withContext(Dispatchers.IO) {
+        service.getAllPokemons()
     }
 }

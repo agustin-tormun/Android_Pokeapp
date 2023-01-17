@@ -1,7 +1,9 @@
 # Android_Pokeapp
 
-### Sesión #2 - 01/12/2023
-- Ya tenemos nuestro adaptador del recycler view
-- Ya tenemos el view model
-- Ya hacemos la peticion al servidor de pokeapi
-- Nos falta mandar a llamar el adaptador en nuestro fragmento y ver si funciona lo que hicimos, si no, corregirlo!!!!
+## Tareas realizadas
+
+- Ligamos nuestro RecyclerView con nuestro adaptador
+- Corregimos la petición a Retrofit que hacíamos de manera errónea
+- Ya estamos pintando nuestros Pókemon's en nuestra lista!! 🏆
+- Agregamos y personalizamos un progress bar para mostrar en lo que descargamos pokemons
+    - Se agregó un `BindingAdapter` para esto
