@@ -1,10 +1,8 @@
 package com.agustin_tormun.android.pokeapp.common.dataAccess
 
 import com.agustin_tormun.android.pokeapp.common.entities.PokemonEntity
-import com.agustin_tormun.android.pokeapp.common.entities.PokemonResult
 import com.agustin_tormun.android.pokeapp.common.utils.Constants
 import retrofit2.http.GET
-import retrofit2.http.Query
 
 /*****
  ** Nombre de Aplicación: PokeApp
@@ -17,10 +15,5 @@ import retrofit2.http.Query
 
 interface PokemonService {
     @GET(Constants.ALL_POKEMON_PATH)
-    suspend fun getAllPokemons(
-        @Query(Constants.PARAM_COUNT) count: Int,
-        @Query(Constants.PARAM_NEXT) next: String?,
-        @Query(Constants.PARAM_PREVIOUS) previous: String?,
-        @Query(Constants.PARAM_RESULTS) results: List<PokemonResult>
-    ): PokemonEntity
+    suspend fun getAllPokemons(): PokemonEntity
 }

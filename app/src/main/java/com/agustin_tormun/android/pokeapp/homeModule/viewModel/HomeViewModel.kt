@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.agustin_tormun.android.pokeapp.R
 import com.agustin_tormun.android.pokeapp.common.entities.PokemonEntity
-import com.agustin_tormun.android.pokeapp.common.entities.PokemonResult
 import com.agustin_tormun.android.pokeapp.homeModule.model.HomeRepository
 import kotlinx.coroutines.launch
 
@@ -32,16 +31,11 @@ class HomeViewModel : ViewModel() {
     private val loaded = MutableLiveData<Boolean>()
     fun getLoaded(): LiveData<Boolean> = loaded
 
-    suspend fun getAllPokemons(
-        count: Int,
-        next: String?,
-        previous: String?,
-        result: List<PokemonResult>
-    ) {
+    suspend fun getAllPokemons() {
         viewModelScope.launch {
             try {
                 loaded.value = false
-                val resultServer = repository.getAllPokemons(count, next, previous, result)
+                val resultServer = repository.getAllPokemons()
                 pokemonsList.value = resultServer
             } catch (e: Exception) {
                 snackbarMessage.value = R.string.main_error_server

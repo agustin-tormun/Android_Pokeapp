@@ -33,7 +33,7 @@ class HomeAdapter(private val listener: OnClickListener) :
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val pokemonResult = getItem(position)
         with(holder as ViewHolder) {
-            holder.binding?.setVariable(BR.pokemonResult, pokemonResult)
+            binding?.setVariable(BR.pokemonResult, pokemonResult)
         }
     }
 

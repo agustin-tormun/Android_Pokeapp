@@ -2,7 +2,6 @@ package com.agustin_tormun.android.pokeapp.homeModule.model
 
 import com.agustin_tormun.android.pokeapp.common.dataAccess.RemoteDatabase
 import com.agustin_tormun.android.pokeapp.common.entities.PokemonEntity
-import com.agustin_tormun.android.pokeapp.common.entities.PokemonResult
 
 /*****
  ** Nombre de Aplicación: PokeApp
@@ -17,9 +16,9 @@ class HomeRepository {
     private var remoteDatabase = RemoteDatabase()
 
     suspend fun getAllPokemons(
-        count: Int,
-        next: String?,
-        previous: String?,
-        result: List<PokemonResult>
-    ): PokemonEntity = remoteDatabase.getAllPokemons(count, next, previous, result)
+//        count: Int,
+//        next: String?,
+//        previous: String?,
+//        result: List<PokemonResult>
+    ): PokemonEntity = remoteDatabase.getAllPokemons()
 }
